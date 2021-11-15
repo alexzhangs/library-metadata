@@ -9,7 +9,11 @@ A knowledge map of the standards and models of the library metadata,
 including MODS, MARK, RDA, Dublin Core (DC), and FRBR family.
 (Created in Sep, 2014)
 
+![Standards and Models of Library Metadata](Standards and Models of Library Metadata Collapsed.svg)
+
 ## DC to RDA Mapping
 
 A mapping from Dublin Core (DC) to RDA.
 (Created in Sep, 2014)
+
+![DC to RDA Mapping](DC to RDA Mapping.svg)
