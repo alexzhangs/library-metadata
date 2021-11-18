@@ -100,7 +100,7 @@ Dublin Core Metadata Element Set
 
 ## Functional Requirements for Bibliographic Records（FRBR） Family
 
-### 书目记录的功能需求｜FRBR
+### FRBR｜书目记录的功能需求
 
 Also be referred as FRBRer while talking FRBRoo
 
@@ -137,7 +137,7 @@ Also be referred as FRBRer while talking FRBRoo
 
 		- 作品｜Work
 
-			- e.g.: who wrote that book - a high level of abstraction, the conceptual content that underlies all of the linguistic versions, the story being told in the book, the ideas in a person's head ofr the book.
+			- e.g.: who wrote that book - a high level of abstraction, the conceptual content that underlies all of the linguistic versions, the story being told in the book, the ideas in a person's head for the book.
 
 		- 内容表达｜Expression
 
@@ -145,7 +145,7 @@ Also be referred as FRBRer while talking FRBRoo
 
 		- 载体表现｜Manifestation
 
-			- e.g.: a publicatiion as when we go to a bookstore to purchase a book. we may know its ISBN but the particular copy does not matter as long as ti's in good condition and not missing pages.
+			- e.g.: a publication as when we go to a bookstore to purchase a book. we may know its ISBN but the particular copy does not matter as long as it's in good condition and not missing pages.
 
 		- 单件｜Item
 
@@ -167,9 +167,9 @@ Also be referred as FRBRer while talking FRBRoo
 		- Events
 		- Places
 
-### 规范数据的功能需求｜FRAD
+### FRAD｜规范数据的功能需求
 
-### 主题规范数据的功能需求｜FRSAD
+### FRSAD｜主题规范数据的功能需求
 
 - 新增实体
 
@@ -187,39 +187,6 @@ Also be referred as FRBRer while talking FRBRoo
 		- 关系
 
 	- 方法 4：使用实际的实体列表
-
-### 海贼王
-
-- 海贼王
-
-	- A manga as an intellectual entity
-
-- 海贼王故事、剧集
-
-	- A manga as an instance designed dependently or independently of its publication media
-
-- 海贼王集英社授权数字版
-
-	- A manga as an instance edited in accordance with its publication media
-
-- 海贼王数字版拷贝
-
-### 第九交响曲
-
-- 第九交响曲
-- 第九交响曲乐谱
-- 1996年伦敦爱乐乐团演奏第九交响曲
-- 1996年演奏录音的拷贝
-
-### 漫画的结构
-
-- 漫画故事结构
-- 漫画展示结构
-
-### 区分漫画的两种形态
-
-- 知识内容的实体
-- 发行的具体化
 
 ## 资源
 
@@ -281,7 +248,9 @@ OpenFRBR is a FRBR implementation in Ruby on Rails.  Or trying to be one.
 A very basic representation of the FRBR Group 1, 2, and 3 entities and the relationships between them.
 This library is not intended to provide the actual bibliographic attributes of the entities, just establish model and the relationships.
 Everything is defined as a Module that you would mixin into some other object.
+
 A basic example:
+```
 # Set up our bibliographic objects that we want to FRBR-ize
 class Story
   attr_accessor :title
@@ -295,7 +264,7 @@ class BookEdition
 end
 class Person
   attr_accessor :name
- end
+end
   
 story = Story.new
 story.title = "The Old Man and the Sea"
@@ -314,6 +283,7 @@ edition.isbn = '0099273969'
 edition.date_published = '2000'
 edition.extend(FRBR::Manifestation)
 edition.embodiment_of(book) # or book.add_embodiment(edition)
+```
 
 ## CIDOC CRM
 
