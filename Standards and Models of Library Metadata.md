@@ -96,97 +96,9 @@ Dublin Core Metadata Element Set
 
 	- aimed at the developers of software applications that support Dublin Core metadata, people involved in developing new syntax encoding guidelines for Dublin Core metadata and people developing metadata application profiles based on DCMI vocabularies or on other compatible vocabularies.
 
-## [ISBD｜国际标准书目著录](http://www.ifla.org/publications/international-standard-bibliographic-description)
+## [MODS｜元数据对象描述标准](http://www.loc.gov/standards/mods/mods-outline-3-5.html)
 
-## Functional Requirements for Bibliographic Records（FRBR） Family
-
-### FRBR｜书目记录的功能需求
-
-Also be referred as FRBRer while talking FRBRoo
-
-- Definition
-
-	- Functional Requirements for Bibliographic Records
-	- is a conceptual entity-relationship model developed by the International Federation of Library Associations and Institutions (IFLA) that relates user tasks of retrieval and access in online library catalogues and bibliographic databases from a user’s perspective. It represents a more holistic approach to retrieval and access as the relationships between the entities provide links to navigate through the hierarchy of relationships.
-
-- Relationships
-
-	- Equivalence｜相等物
-
-		- Copies
-		- Issues
-		- Facsimiles
-		- Reprints
-		- Photocopies
-		- Microfilms
-
-	- Derivative｜衍生物
-
-		- Editions
-		- Translations
-		- Digests
-		- 对原作进行的改编
-		- 形式变更
-		- 基于原作风格或主题的新创作
-
-	- Descriptive｜描写
-
-- Entities｜实体
-
-	- Group 1
-
-		- 作品｜Work
-
-			- e.g.: who wrote that book - a high level of abstraction, the conceptual content that underlies all of the linguistic versions, the story being told in the book, the ideas in a person's head for the book.
-
-		- 内容表达｜Expression
-
-			- e.g.: who translated that book - we may have a particular text in mind and a specific language.
-
-		- 载体表现｜Manifestation
-
-			- e.g.: a publication as when we go to a bookstore to purchase a book. we may know its ISBN but the particular copy does not matter as long as it's in good condition and not missing pages.
-
-		- 单件｜Item
-
-			- e.g.: to describe a physical object that has paper pages and a binding and can sometimes be used to prop open a door or hold up a table leg.
-
-	- Group 2
-
-	  Agents who have contributed to an instance of manga in some way
-	  
-		- Person
-		- Corporate Body
-
-	- Group 3
-
-	  define things or objects which are described in or are the subject of the manga
-	  
-		- Concepts
-		- Objects
-		- Events
-		- Places
-
-### FRAD｜规范数据的功能需求
-
-### FRSAD｜主题规范数据的功能需求
-
-- 新增实体
-
-	- 主题｜Thema
-	- 主题表述｜Nomen
-
-- 创建 Aboutness 模型
-
-	- 方法 1：使用FRBR第三组实体：概念、对象、地点、事件
-	- 方法 2：个人、事物、能量、空间、时间
-	- 方法 3：indices 模型
-
-		- 知觉对象
-		- 概念
-		- 关系
-
-	- 方法 4：使用实际的实体列表
+## MARC｜机读目录
 
 ## 资源
 
@@ -285,6 +197,98 @@ edition.extend(FRBR::Manifestation)
 edition.embodiment_of(book) # or book.add_embodiment(edition)
 ```
 
+## [ISBD｜国际标准书目著录](http://www.ifla.org/publications/international-standard-bibliographic-description)
+
+## Functional Requirements for Bibliographic Records（FRBR） Family
+
+### FRBR｜书目记录的功能需求
+
+Also be referred as FRBRer while talking FRBRoo
+
+- Definition
+
+	- Functional Requirements for Bibliographic Records
+	- is a conceptual entity-relationship model developed by the International Federation of Library Associations and Institutions (IFLA) that relates user tasks of retrieval and access in online library catalogues and bibliographic databases from a user’s perspective. It represents a more holistic approach to retrieval and access as the relationships between the entities provide links to navigate through the hierarchy of relationships.
+
+- Relationships
+
+	- Equivalence｜相等物
+
+		- Copies
+		- Issues
+		- Facsimiles
+		- Reprints
+		- Photocopies
+		- Microfilms
+
+	- Derivative｜衍生物
+
+		- Editions
+		- Translations
+		- Digests
+		- 对原作进行的改编
+		- 形式变更
+		- 基于原作风格或主题的新创作
+
+	- Descriptive｜描写
+
+- Entities｜实体
+
+	- Group 1
+
+		- 作品｜Work
+
+			- e.g.: who wrote that book - a high level of abstraction, the conceptual content that underlies all of the linguistic versions, the story being told in the book, the ideas in a person's head for the book.
+
+		- 内容表达｜Expression
+
+			- e.g.: who translated that book - we may have a particular text in mind and a specific language.
+
+		- 载体表现｜Manifestation
+
+			- e.g.: a publication as when we go to a bookstore to purchase a book. we may know its ISBN but the particular copy does not matter as long as it's in good condition and not missing pages.
+
+		- 单件｜Item
+
+			- e.g.: to describe a physical object that has paper pages and a binding and can sometimes be used to prop open a door or hold up a table leg.
+
+	- Group 2
+
+	  Agents who have contributed to an instance of manga in some way
+	  
+		- Person
+		- Corporate Body
+
+	- Group 3
+
+	  define things or objects which are described in or are the subject of the manga
+	  
+		- Concepts
+		- Objects
+		- Events
+		- Places
+
+### FRAD｜规范数据的功能需求
+
+### FRSAD｜主题规范数据的功能需求
+
+- 新增实体
+
+	- 主题｜Thema
+	- 主题表述｜Nomen
+
+- 创建 Aboutness 模型
+
+	- 方法 1：使用FRBR第三组实体：概念、对象、地点、事件
+	- 方法 2：个人、事物、能量、空间、时间
+	- 方法 3：indices 模型
+
+		- 知觉对象
+		- 概念
+		- 关系
+
+	- 方法 4：使用实际的实体列表
+
 ## CIDOC CRM
 
 CIDOC Conceptual Reference Model，用于博物馆界资源的编目
@@ -294,10 +298,6 @@ CIDOC Conceptual Reference Model，用于博物馆界资源的编目
 BRBRoo是CIDOC CRM与FRBR协调的产物
 
 ## PRESSoo
-
-## MARC｜机读目录
-
-## [MODS｜元数据对象描述标准](http://www.loc.gov/standards/mods/mods-outline-3-5.html)
 
 ## AACR｜英美编目条例
 
